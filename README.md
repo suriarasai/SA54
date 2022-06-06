@@ -3,8 +3,8 @@
 Welcome SA 53 Folks - All classroom demo codes will be here. Enjoy coding with Java and Spring Framework.
 ===================================================================
 
-#Topic 
-## Jav1
+ 
+## Java1
 Day 1: Introduction to Java Language Basics, Static and Eclipse Workbench.
 
 Day 2: Static, Inheritance and Object Reuse, Introduction to Collection. 
