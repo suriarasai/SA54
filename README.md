@@ -1,7 +1,7 @@
 # SA54
 
 Welcome SA 53 Folks - All classroom demo codes will be here. Enjoy coding with Java and Spring Framework.
-
+===================================================================
 
 Topic 
 ## Jav1
@@ -11,7 +11,7 @@ Day 3: Exceptions, Library Classes and Sorting/Searching with Collections
 Day 4: MySQL, Java Persistence Architecture and Build Tools 
 Day 5: Introduction to Generics and Functional Programming 
 Day 6: Advanced JPA Queries 
-===================================================================
+
 ## Java 2
 Day 7: Full Stack Introduction and Spring Framework Introduction 
 Day 8: Spring Data JPA 
