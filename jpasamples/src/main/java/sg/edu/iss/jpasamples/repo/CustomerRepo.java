@@ -13,7 +13,7 @@ public interface CustomerRepo extends JpaRepository<Customer, Integer> {
 	
 	// In built templates in Spring Data
 	ArrayList<Customer> findCustomersByName(String name);
-	ArrayList<Customer> readByAddress_StreetLike(String street);
+	//ArrayList<Customer> readByAddress_StreetLike(String street);
 	
 	
 	@Query("Select c from Customer c where c.name = :name")
