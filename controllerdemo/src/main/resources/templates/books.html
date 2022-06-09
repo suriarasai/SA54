@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Welcome</title>
+	<link rel="stylesheet" type="text/css" media="all" href="../../css/simple.css" th:href="@{/css/simple.css}" />
+</head>
+<H1>Welcome To Book Details</H1>
+<table>
+	<th>
+		<td>ISBN Number</td>
+		<td>Book Name</td>
+		<td>Description</td>
+		<td>Price</td>
+	</th>
+	<tr th:each="book:${booksdata}">
+	     <td th:text="${book.isbn}">isbn</td>
+	     <td th:text="${book.name}">name</td>
+	     <td th="${book.description}">desc</td>
+	     <td th="${book.price}">price</td>     
+	</tr>	
+</table>
+
+<body>
