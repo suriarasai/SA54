@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Welcome</title>
+		<link rel="stylesheet" type="text/css" media="all"
+	    href="../../css/simple.css" th:href="@{/css/simple.css}"/>
+</head>
+ <H1>Welcome</H1>
+ <h2>Hi there, today is ${tod} </h2>
+ <h2>Hi SA54, today is <span th:text=${tod}> </h2>
+ <p>This is some blah blah</p>
+<body>
