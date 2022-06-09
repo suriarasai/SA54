@@ -36,7 +36,7 @@ public class Order {
 	private Address shippingAddress;
 
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-	@JoinColumn(name = "orderId")
+	//@JoinColumn(name = "orderId")
 	private Set<LineItem> lineItems = new HashSet<LineItem>();
 
 	public Order(Customer customer, Address billingAddress, Address shippingAddress, Set<LineItem> lineItems) {

@@ -18,6 +18,7 @@ public class LineItem {
 	private Integer lineItemId;
 	@ManyToOne
 	private Product product;
+
 	@Column(nullable = false)
 	private Double price;
 	private Double amount;

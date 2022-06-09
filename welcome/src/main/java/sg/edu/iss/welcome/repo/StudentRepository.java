@@ -13,5 +13,7 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 	//@Query("from Student s where s.nickName = ?1")
 	@Query("from Student s where s.nickName = :nn")
 	public ArrayList<Student> funnyNameOne(@Param("nn") String nickName);
+	
+	//@Query("",native=true);
 
 }

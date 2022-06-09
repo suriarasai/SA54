@@ -21,7 +21,7 @@ public class Customer implements Comparable<Customer> {
 	private String name;
 	@Column(unique = true)
 	private EmailAddress emailAddress;
-
+    
 	public Customer(String name, EmailAddress emailAddress) {
 		super();
 		this.name = name;
