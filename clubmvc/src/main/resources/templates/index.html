@@ -1,0 +1,11 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/general.html :: headerfiles"/>
+<body>
+	<header th:insert="fragments/general.html :: header"> </header>
+	<div th:replace="fragments/general.html :: menu"></div>
+	<div align="center">
+		<img alt="" th:src="@{/image/image.png}" />
+	</div>
+	<div th:replace="fragments/general.html :: footer"></div>
+</body>
+</html>
