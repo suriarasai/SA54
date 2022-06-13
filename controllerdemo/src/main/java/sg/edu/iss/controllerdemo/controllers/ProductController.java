@@ -1,9 +1,14 @@
 package sg.edu.iss.controllerdemo.controllers;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,8 +19,14 @@ import sg.edu.iss.controllerdemo.repo.ProductRepository;
 @Controller
 @RequestMapping("/product")
 public class ProductController {
+	
 	@Autowired
 	ProductRepository prepo;
+	
+	@InitBinder
+	protected void initBinder(WebDataBinder binder) {
+				
+	}
 	
 	@GetMapping("/add")
 	public String showProductForm(Model model) {
@@ -25,8 +36,12 @@ public class ProductController {
 	}
 	
 	@GetMapping("/save")
-	public String saveProductForm(@ModelAttribute("product") Product product, Model model) {
+	public String saveProductForm(@ModelAttribute("product") @Valid Product product, BindingResult bindingResult, Model model) {
 		
+		if (bindingResult.hasErrors()) 
+		{
+			return "productform";
+		}
 		prepo.save(product);
 		return "forward:/product/listproducts";
 	}
@@ -47,10 +62,8 @@ public class ProductController {
 	  public String deleteMethod(Model model, @PathVariable("id") Integer id) {
 		Product product = prepo.findById(id).get();
 		prepo.delete(product);
-		return "forward:/product/products";
+		return "forward:/product/listproducts";
 	  }
 
 
-
-	
 }

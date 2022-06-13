@@ -1,35 +1,47 @@
 package sg.edu.iss.controllerdemo.domain;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-@Entity
 @Data
 @NoArgsConstructor
-public class Product  {
+@ToString
+@Entity
+public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer productId;
+	private int id;
 	private String name;
+	private String brand;
 	private String description;
 	private Double price;
-	@DateTimeFormat(pattern = "dd/MM/yyyy")
-	private Date dom;
-	public Product(String name, String description, Double price, Date dom) {
+	
+	private LocalDate dom;
+	public Product(int id, String name, String brand, String description, Double price, LocalDate dom) {
 		super();
+		this.id = id;
 		this.name = name;
+		this.brand = brand;
 		this.description = description;
 		this.price = price;
 		this.dom = dom;
 	}
+	public Product(String name, String brand, String description, Double price, LocalDate dom) {
+		super();
+		this.name = name;
+		this.brand = brand;
+		this.description = description;
+		this.price = price;
+		this.dom = dom;
+	}
+	
 	
 }
