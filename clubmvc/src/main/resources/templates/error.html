@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/general.html :: headerfiles"/>
+<body>
+	<header th:insert="fragments/general.html :: header"> </header>
+	<div th:replace="fragments/general.html :: menu"></div>
+	<h1>Error Page</h1>
+	<h2> Booking Dates</h2>
+	<p class="error">
+	The Facility is not available for booking in this date range.
+	</p>
+	<div th:replace="fragments/general.html :: footer"></div>
+</body>
+</html>
