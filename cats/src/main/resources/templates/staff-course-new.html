@@ -23,13 +23,13 @@
 				</tr>
 				<tr>
 					<td><span th:text="#{fieldLabel.startDate}"></span></td>
-					<td><input type="date" th:field="*{#dates.format(fromDate, 'yyyy-MM-dd')}"  /></td>
+					<td><input type="text" th:field="*{#dates.format(fromDate, 'yyyy-MM-dd')}"  /></td>
 					<td th:if="${#fields.hasErrors('fromDate')}"
 						th:errors="*{fromDate}"></td>
 				</tr>
 				<tr>
 					<td><span th:text="#{fieldLabel.endDate}"></span></td>
-					<td><input type="date" th:field="*{#dates.format(toDate, 'yyyy-MM-dd')}" /></td>
+					<td><input type="text" th:field="*{#dates.format(toDate, 'yyyy-MM-dd')}" /></td>
 					<td th:if="${#fields.hasErrors('toDate')}" th:errors="*{toDate}"></td>
 				</tr>
 				<tr>
