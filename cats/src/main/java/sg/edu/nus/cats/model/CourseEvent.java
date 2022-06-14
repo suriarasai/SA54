@@ -36,10 +36,10 @@ import sg.edu.nus.cats.helper.CourseEventEnum;
 public class CourseEvent {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "courseeventid")
 	private int courseEventId;
-	@Temporal(TemporalType.DATE)
+	
 	@Column(name = "timestamp")
 	private Date timeStamp;
 	@Column(name = "eventtype", columnDefinition = "ENUM('SUBMITTED', 'APPROVED', 'WITHDRAWN', 'UPDATED', 'REJECTED')")

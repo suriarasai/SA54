@@ -42,7 +42,7 @@ public class Course {
 	/** Attributes for Course **/
 	@Id
 	@Column(name = "courseid")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int courseId;
 	@Basic
 	@Column(name = "employeeid")

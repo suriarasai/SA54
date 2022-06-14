@@ -17,7 +17,7 @@ public class ClubApplication {
 	@PostConstruct
 	  public void init(){
 	    // Setting Spring Boot SetTimeZone
-	    TimeZone.setDefault(TimeZone.getTimeZone("SGTs"));
+	    TimeZone.setDefault(TimeZone.getTimeZone("SGT"));
 	  }
 
 }
