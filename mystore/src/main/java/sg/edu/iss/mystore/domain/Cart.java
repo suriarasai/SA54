@@ -20,9 +20,9 @@ import lombok.ToString;
 public class Cart {
 	   @Id
 	   private String id;
-	   @OneToMany(mappedBy = "product", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	   @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	   private List<CartItem> cartItems;
-	   private BigDecimal grandTotal;
+	   private Double grandTotal;
 	   //BigDecimal BigInteger
 	   public Cart(String id) {
 	      this.id = id;

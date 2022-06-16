@@ -1,0 +1,28 @@
+{
+	"id": "C001",
+	"cartItems": [
+		{
+			"id": "IT001",
+			"product" : {
+				"productId": "P001",
+				"name": "Pringles",
+				"description": "Chips",
+				"unitPrice": 3.20
+			},
+			"quantity": 1,
+			"totalPrice": 3.20
+		},
+		{
+			"id": "IT002",
+			"product" : {
+				"productId": "P002",
+				"name": "Chocolates",
+				"description": "80% Dark Orange Flavour",
+				"unitPrice": 4.50
+			},
+			"quantity": 2,
+			"totalPrice": 9.00
+		}
+	],
+	"grandTotal": 12.20
+}

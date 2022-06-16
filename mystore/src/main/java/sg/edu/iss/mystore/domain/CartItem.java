@@ -1,11 +1,9 @@
 package sg.edu.iss.mystore.domain;
 
-import java.math.BigDecimal;
-
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,10 +15,10 @@ import lombok.ToString;
 public class CartItem {
 	   @Id
 	   private String id;
-	   @ManyToOne(targetEntity = Product.class, fetch = FetchType.EAGER)
+	   @OneToOne(fetch = FetchType.EAGER)
 	   private Product product;
 	   private int quantity;
-	   private BigDecimal totalPrice;
+	   private Double totalPrice;
 	   
 	   public CartItem(String id) {
 		      super();

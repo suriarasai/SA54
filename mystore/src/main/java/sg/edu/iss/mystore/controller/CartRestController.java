@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +20,7 @@ import sg.edu.iss.mystore.domain.CartItem;
 import sg.edu.iss.mystore.domain.Product;
 import sg.edu.iss.mystore.repo.CartRepository;
 import sg.edu.iss.mystore.repo.ProductRepository;
-
+@CrossOrigin(origins = "http://localhost:8080")
 @RestController
 @RequestMapping(value = "/api/cart")
 public class CartRestController {
