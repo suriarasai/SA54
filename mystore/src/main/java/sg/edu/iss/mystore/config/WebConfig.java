@@ -14,12 +14,12 @@ public class WebConfig implements WebMvcConfigurer{
 	@Autowired
 	ProcessingTimeLogInterceptor ptimelogger;
 	
-	@Autowired
-	PromoCodeInterceptor promointercepter;
+	//@Autowired
+	//PromoCodeInterceptor promointercepter;
 	
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(ptimelogger);
-		registry.addInterceptor(promointercepter);
+		//registry.addInterceptor(promointercepter);
 	}
 
 }

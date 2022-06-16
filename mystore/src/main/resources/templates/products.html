@@ -9,29 +9,28 @@
 <body>
 <h1> Product Listing
 </h1>     
-
+	<h2>Add a product</h2>
+	<br />
+	<p><a th:href="@{/product/add}" th:utext="#{products.add}">Add</a></p>
+	<br />
 <table>
  <tr>
    <th>ID</th>
    <th>NAME</th>
    <th>DESCRIPTION</th>
-   <th>BRAND</th>
    <th>PRICE</th>
-   <th>DOM</th>
    <th>Edit Link</th>
    <th>Delete Link</th>
  </tr>
  <tr th:each="product:${products}">
-   <td th:text="${product.id}">ID</td> 
-   <td th:text="${product.name}">ID</td>
-   <td th:text="${product.description}">ID</td>
-   <td th:text="${product.brand}">ID</td>
-   <td th:text="${product.price}">ID</td>
-   <td th:text="${#dates.format(product.dom, 'dd-MM-yyyy')}">ID</td>
+   <td th:text="${product.productId}">id</td> 
+   <td th:text="${product.name}">name</td>
+   <td th:text="${product.description}">description</td>
+   <td th:text="${product.unitPrice}">price</td>
    <td><a href="EditProduct.html"
-		th:href="@{/product/edit/}+${product.id}" th:utext="#{products.page.edit}"> Edit </a></td>
+		th:href="@{/product/edit/}+${product.productId}" th:utext="#{products.page.edit}"> Edit </a></td>
 	      <td><a href="DeleteProduct.html"
-		th:href="@{/product/delete/}+${product.id}" th:utext="#{products.page.delete}"> Delete </a></td>
+		th:href="@{/product/delete/}+${product.productId}" th:utext="#{products.page.delete}"> Delete </a></td>
    
  </tr>
 </table>

@@ -21,7 +21,7 @@ import sg.edu.iss.mystore.repo.CartRepository;
 import sg.edu.iss.mystore.repo.ProductRepository;
 
 @RestController
-@RequestMapping(value = "api/cart")
+@RequestMapping(value = "/api/cart")
 public class CartRestController {
 	
 	   @Autowired

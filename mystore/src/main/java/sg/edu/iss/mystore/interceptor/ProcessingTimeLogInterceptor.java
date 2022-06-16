@@ -17,7 +17,7 @@ public class ProcessingTimeLogInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         long startTime = System.currentTimeMillis();
         request.setAttribute("startTime", startTime);
-
+        LOGGER.info(String.format("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Starts here"));
         return true;
     }
  
@@ -28,7 +28,7 @@ public class ProcessingTimeLogInterceptor implements HandlerInterceptor {
         long startTime = (Long) request.getAttribute("startTime");
         long endTime = System.currentTimeMillis();
         
-        LOGGER.info(String.format("%s millisecond taken to process the request %s.",(endTime - startTime), path));
+        LOGGER.info(String.format("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ %s millisecond taken to process the request %s.",(endTime - startTime), path));
     }
  
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception exceptionIfAny){

@@ -23,7 +23,7 @@ public class Cart {
 	   @OneToMany(mappedBy = "product", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	   private List<CartItem> cartItems;
 	   private BigDecimal grandTotal;
-
+	   //BigDecimal BigInteger
 	   public Cart(String id) {
 	      this.id = id;
 	   }

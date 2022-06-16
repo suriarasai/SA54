@@ -26,23 +26,19 @@ import lombok.ToString;
 @Entity
 public class Product {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private String productId;
-	@Size(min=4, max=50, message="{Size.Product.name.validation}")
+	@Size(min=4, max=50, message="{size.Product.name.validation}")
 	private String name;
-	@Min(value=0, message="{Min.Product.unitPrice.validation}")
-	@Digits(integer=8, fraction=2, message="{Digits.Product.unitPrice.validation}")
-	@NotNull(message= "{NotNull.Product.unitPrice.validation}")
+	@Min(value=0, message="{min.product.unitPrice.validation}")
+	@Digits(integer=8, fraction=2, message="{dgits.product.unitPrice.validation}")
+	@NotNull(message= "{notNull.product.unitPrice.validation}")
 	private BigDecimal unitPrice;
 	private String description;
-	private String manufacturer;
-	private String category;
-	private long unitsInStock;
-	private long unitsInOrder;
-	private boolean discontinued;
-	private String condition;
-	//@JsonIgnore
-	//private MultipartFile productImage;
+	//private String manufacturer;
+	//private String category;
+	//private long unitsInStock;
+	//private long unitsInOrder;
+
 	
 	public Product(String productId, String name, BigDecimal unitPrice) {
 		this.productId = productId;
